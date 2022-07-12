@@ -21,4 +21,5 @@ public class Proyectos implements Serializable {
     private String imagen;
     private String tecnologiasUsadas;
     private String caracteristicasNotables;
+    private String github;
 }

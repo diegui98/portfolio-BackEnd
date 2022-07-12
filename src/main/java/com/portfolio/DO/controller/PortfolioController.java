@@ -328,12 +328,14 @@ public class PortfolioController {
             @RequestParam String nombre,
             @RequestParam String descripcion,
             @RequestParam String tecnologiasUsadas,
-            @RequestParam String caracteristicasNotables){
+            @RequestParam String caracteristicasNotables,
+            @RequestParam String github){
         Proyectos proye = interProye.findProyecto(id);
         proye.setNombre(nombre);
         proye.setDescripcion(descripcion);
         proye.setTecnologiasUsadas(tecnologiasUsadas);
         proye.setCaracteristicasNotables(caracteristicasNotables);
+        proye.setGithub(github);
         interProye.saveProyecto(proye);
         return proye;
     }
